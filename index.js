@@ -17,7 +17,7 @@ mongoose.connect(dbUrl, (err) => {
 });
 
 //setting up app to use static files
-const PORT = 8000;
+const PORT = `0.0.0.0:$PORT`;
 const app = express();
 const server = app.listen(PORT, () => {
   console.log(`server started, listening on port ${PORT} `);
