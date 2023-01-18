@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding Bootstrap 5.2.1 cdn link and icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Adding Google font cdn for access to Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Linking Font Awesome cdn for access to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Linking Jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <title>Dev-Connect Chat</title>
+</head>
+
+<body>
+    <!-- Header html -->
+
+    <header id="header" class="">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand d-flex" href="#">
+                <img class="logo" src="images/logo.svg" alt="logo" /><span
+                    class="align-self-end fst-italic">Dev-Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 pt-4 pt-lg-0">
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a class="btn btn-large text-white join-chat disabled" href="#">Leave Conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="chat-bg">
+        <div class="container mt-5">
+            <div class="row d-flex ">
+                <div class="col-lg-3 border border-2  p-4 side-bar ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5>Chats</h5>
+                        <div><i class="fa-solid fa-circle-plus"></i></div>
+                    </div>
+                    <!-- The user search  input -->
+                    <div class="input-group bg-dark mb-5">
+                        <span class="bg-dark  input-group-text"><i class="fa fa-search"></i></span>
+                        <input type="text" class="bg-dark form-control" placeholder="Search for a user...">
+                    </div>
+                    <!-- End: The user search  input  -->
+
+                    <!-- The list of active communities channels -->
+                    <div id="channels" class="">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5>Channels</h5>
+                            <div><i class="fa-solid fa-circle-plus"></i></div>
+                        </div>
+                        <ul class="list-unstyled  channels-list">
+
+                        </ul>
+                    </div>
+                    <!-- The list of active communities channels -->
+
+                    <div class="mt-5">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h5>Members</h5>
+                            <div><i class="fa-solid fa-circle-plus"></i></div>
+                        </div>
+                        <ul class="list-unstyled member-list">
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-9 border border-2 py-4 top-chat position-relative ">
+                    <header class="d-flex justify-content-between">
+                        <div class="d-flex align-items-start">
+                            <img class="header-img" src="images/community.svg" />
+                            <div>
+                                <h6 class="channel-title fs-6 pb-0"></h6>
+                                <p>24 Members</p>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <button class="p-2 btn btn-danger"><i
+                                    class="fa-solid fa-arrow-right-from-bracket text-white"></i>Exit
+                                Chat</button>
+                        </div>
+                    </header>
+
+                    <section>
+
+                        <div id="chat-page">
+
+                            <ul id="chat-display">
+
+                            </ul>
+
+                        </div>
+
+                        <div class="messageInput">
+                            <div class="input-group mb-0">
+
+                                <span class="input-group-text"><i class="fa-solid fa-paper-plane"></i></span>
+
+                                <input id="inputMessage" type="text" class="form-control"
+                                    placeholder="Enter text here...">
+                                <button id="sendMessage">Send</button>
+                            </div>
+                        </div>
+
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- End of Header html -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+
+</body>
+
+</html>

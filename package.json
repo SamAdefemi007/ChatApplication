@@ -1,0 +1,27 @@
+{
+  "name": "final-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.4",
+    "node-fetch-commonjs": "^3.2.4",
+    "socket.io": "^4.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

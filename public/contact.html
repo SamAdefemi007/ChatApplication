@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding Bootstrap 5.2.1 cdn link and icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Adding Google font cdn for access to Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Linking Font Awesome cdn for access to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Linking Jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="styles/app.css">
+    <title>Contact Dev-Connect</title>
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand d-flex" href="#">
+                <img class="logo" src="images/logo.svg" alt="logo" /><span
+                    class="align-self-end fst-italic">Dev-Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 pt-4 pt-lg-0">
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a class="btn btn-large text-white join-chat" href="index.html">Join Discussion</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contact_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class=" d-flex flex-lg-row flex-column justify-content-between align-items-between">
+
+                        <div class="contact_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="mx-auto">
+                                <div><i class="fa-solid fa-square-phone me-2"></i><span>Phone</span></div>
+                                <div>+447467253630</div>
+                            </div>
+                        </div>
+
+                        <div class="contact_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="mx-auto">
+                                <div class=""><i class="fa-solid fa-envelope me-2"></i><span>Email</span></div>
+                                <div>t14so21@abdn.ac.uk</div>
+                            </div>
+                        </div>
+                        <div class="contact_item d-flex flex-row align-items-center justify-content-start">
+                            <div class="mx-auto">
+                                <div><i class="fa-solid fa-location-dot me-2"></i><span>Address</span></div>
+                                <div>Aberdeen, United Kingdom</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+
+    <div class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="contact_form_container">
+                        <div class="contact_form_title">Get in Touch with Us</div>
+                        <form action="#" id="contact_form">
+                            <div
+                                class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                                <input type="text" name="name" class="mb-4 input-field" placeholder="Your name"
+                                    required="required">
+                                <input type="text" name="email" class="mb-4 input-field" placeholder="Your email"
+                                    required>
+                                <input type="text" name="phone" class="mb-4 input-field"
+                                    placeholder="Your phone number">
+                            </div>
+                            <div>
+                                <textarea name="message" class="text-field" name="message" rows="4"
+                                    placeholder="Message" required></textarea>
+                            </div>
+                            <div class="contact_form_button">
+                                <button type="submit" class="button contact_submit_button">Send Message</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

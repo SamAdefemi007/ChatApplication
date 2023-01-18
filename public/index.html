@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding Bootstrap 5.2.1 cdn link and icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Adding Google font cdn for access to Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Linking Font Awesome cdn for access to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Linking Jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="styles/app.css">
+
+    <title>Aberdeen Dev-Connect</title>
+</head>
+
+<body>
+
+    <!-- Header html -->
+
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand d-flex" href="#">
+                <img class="logo" src="images/logo.svg" alt="logo" /><span
+                    class="align-self-end fst-italic">Dev-Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 pt-4 pt-lg-0">
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item nav-lg-tabs me-4">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a class="btn btn-large text-white join-chat" href="#">Join Discussion</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- End of Header html -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex  align-items-center min-vh-100 h-80vh ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6  hero-img">
+                    <img src="images/hero-img.svg" class="img-fluid animation-img" alt="">
+                </div>
+                <div class="col-lg-6 pt-5 px-4 pt-lg-0 d-flex flex-column justify-content-center px-lg-0 ">
+                    <h1 class="fw-bold fs-1 ">Buiding the Builders of the Next Tech Unicorns</h1>
+                    <p class="fs-5 fst-italic">We are building a team of talented developers and designers in the city
+                        of Aberdeen
+                    </p>
+                    <button class="btn fs-3 fw-normal join-chat">
+                        <a href="#" class="">Join our community</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- End of Hero Section -->
+
+    <!-- What we do section -->
+
+    <section id="services" class="services px-4">
+        <div class="container">
+
+            <h1 class="my-5 section-title">Why Join Us?</h1>
+
+            <div class="row ">
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="card p-4 h-100">
+                        <div class="icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h4 class="title"><a href="">Expand your Network</a></h4>
+                        <p class="lh-4">We provide the perfect opportunity to collaborate and network with
+                            individuals across all levels who shares similar interests</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                    <div class="card p-4 h-100">
+                        <div class="icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h4 class="title"><a href="">Access to Resources</a></h4>
+                        <p class="lh-4">We also provide access to a number of resources for all developers. Our
+                            curriculum is carefully curated to quickly get you
+                            up to speed.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                    <div class="card p-4 h-100">
+                        <div class="icon"><i class="fa-solid fa-circle-question"></i></div>
+                        <h4 class="title"><a href="">Community Support</a></h4>
+                        <p class="lh-4">Joining a community means you have access to constantly available and
+                            widely range levels of support from other community members </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End of what we do section -->
+
+
+    <!-- Join the community form section -->
+    <section id="communitySection" class="container my-5">
+        <h1>Join our community</h1>
+        <div class="container community-section">
+            <h2 class="mb-4"><i class="fa-solid fa-message dev-icon"></i> Dev-Connect</h2>
+
+            <form class="form-group community-form" action="chat.html">
+                <div class="form-control mb-3 py-4">
+                    <label class="mb-2" for="username">Username</label>
+                    <input class="d-block w-100 p-2" type="text" name="username" id="username"
+                        placeholder="Enter your username..." required>
+                </div>
+
+                <div class="form-control mb-3 py-4 ">
+                    <label class="mb-2" for="community">Choose Community</label>
+                    <select class="d-block w-100 p-2" name="community" id="community">
+
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-lg  w-100" id="join-btn">Join Chat now</button>
+
+            </form>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- End of Join the community form section -->
+
+    <!-- Footer -->
+
+    <footer class="text-center text-lg-start">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <div class="row">
+
+                    <div class="d-flex  justify-content-center align-items-end">
+                        <img src="images/logo.svg" /> <span class="fst-italic">Dev-Connect</span>
+                    </div>
+
+                    <hr class="my-3">
+                    <section class="p-3 pt-0">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-7 col-lg-8 text-center text-md-start">
+                                <div class="p-3">
+                                    © 2022 Copyright:
+                                    <a class="text-white" href="#">Dev-Connect</a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+                                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                        class="fab fa-facebook-f"></i></a>
+
+                                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                        class="fab fa-twitter"></i></a>
+
+                                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                        class="fab fa-google"></i></a>
+
+                                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+    </footer>
+
+    <!-- End of Footer -->
+
+
+    <!-- Bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
